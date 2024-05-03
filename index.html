@@ -21,6 +21,14 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
         }
 
         .container {
@@ -47,7 +55,7 @@
         }
 
         .contribution {
-            flex: 0 0 calc(33.33% - 20px);
+            flex: 0 0 calc(50% - 20px);
             margin-bottom: 40px;
             padding: 20px;
             background-color: #87ceeb; /* Sky Blue */
@@ -65,6 +73,7 @@
             font-size: 1.5em;
             margin-bottom: 10px;
             color: #fff;
+            text-transform: uppercase;
         }
 
         .contribution p {
@@ -72,13 +81,18 @@
             color: #fff;
         }
 
-        @media screen and (max-width: 768px) {
-            .contribution {
-                flex: 0 0 calc(50% - 20px);
-            }
+        .contribution i {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #fff;
+            transition: transform 0.3s ease;
         }
 
-        @media screen and (max-width: 480px) {
+        .contribution:hover i {
+            transform: rotate(360deg);
+        }
+
+        @media screen and (max-width: 768px) {
             .contribution {
                 flex: 0 0 100%;
             }
@@ -91,16 +105,14 @@
             <h2>Contribuțiile Mele</h2>
             <div class="contributions">
                 <div class="contribution">
+                    <i class="fas fa-comment"></i>
                     <h3>Proiect Xat.com Forum</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget libero velit.</p>
                 </div>
                 <div class="contribution">
+                    <i class="fas fa-comments"></i>
                     <h3>Proiect Chats</h3>
                     <p>Nulla facilisi. In hac habitasse platea dictumst. Cras auctor turpis nec diam tincidunt, nec ultricies dolor cursus.</p>
-                </div>
-                <div class="contribution">
-                    <h3>Alte Proiecte Oficiale</h3>
-                    <p>Ut eu fermentum mauris. Vivamus sit amet risus id metus ullamcorper tincidunt. Duis finibus, lorem vel porttitor vehicula, ligula sapien luctus sapien.</p>
                 </div>
             </div>
         </section>
