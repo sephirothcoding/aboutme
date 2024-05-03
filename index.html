@@ -44,8 +44,35 @@
         }
 
         section h2 {
-            font-size: 2em;
+            font-size: 3em;
             margin-bottom: 20px;
+            color: #87ceeb; /* Sky Blue */
+            position: relative;
+            display: inline-block;
+        }
+
+        section h2::before,
+        section h2::after {
+            content: "";
+            position: absolute;
+            width: 50%;
+            height: 4px;
+            background-color: #87ceeb; /* Sky Blue */
+            bottom: -10px;
+            transition: width 0.3s ease;
+        }
+
+        section h2::before {
+            left: 0;
+        }
+
+        section h2::after {
+            right: 0;
+        }
+
+        section h2:hover::before,
+        section h2:hover::after {
+            width: 80%;
         }
 
         .contributions {
