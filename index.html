@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofoliu</title>
+    <title>Portofoliu - Contribuțiile Mele</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         /* Reset CSS */
@@ -30,33 +30,6 @@
             padding: 20px;
         }
 
-        header {
-            background-color: #87ceeb; /* Sky Blue */
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.5em;
-        }
-
-        nav ul {
-            list-style-type: none;
-            text-align: center;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 1.2em;
-        }
-
         section {
             padding: 50px 0;
             text-align: center;
@@ -67,88 +40,70 @@
             margin-bottom: 20px;
         }
 
-        .portfolio-item {
-            margin-bottom: 30px;
+        .contributions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
 
-        .portfolio-item img {
-            width: 100%;
-            max-width: 300px;
+        .contribution {
+            flex: 0 0 calc(33.33% - 20px);
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #87ceeb; /* Sky Blue */
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
         }
 
-        footer {
-            background-color: #87ceeb; /* Sky Blue */
+        .contribution:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .contribution h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
             color: #fff;
-            text-align: center;
-            padding: 20px 0;
         }
 
-        footer p {
-            font-size: 0.9em;
+        .contribution p {
+            font-size: 1.1em;
+            color: #fff;
+        }
+
+        @media screen and (max-width: 768px) {
+            .contribution {
+                flex: 0 0 calc(50% - 20px);
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .contribution {
+                flex: 0 0 100%;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Portofoliu</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">Despre</a></li>
-                    <li><a href="#portfolio">Portofoliu</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section id="about" class="section">
-        <div class="container">
-            <h2>Despre mine</h2>
-            <p>Salut! Sunt pasionat de cosmetica și îmi place să creez lucrări uimitoare care să evidențieze frumusețea naturală. Vino să descoperi ceva special!</p>
-        </div>
-    </section>
-
-    <section id="portfolio" class="section">
-        <div class="container">
-            <h2>Portofoliu</h2>
-            <div class="portfolio-item">
-                <img src="https://via.placeholder.com/300" alt="Lucrare cosmetica">
-                <h3>Lucrare 1</h3>
-                <p>O descriere scurtă a lucrării sau a produsului</p>
+    <div class="container">
+        <section>
+            <h2>Contribuțiile Mele</h2>
+            <div class="contributions">
+                <div class="contribution">
+                    <h3>Proiect Xat.com Forum</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget libero velit.</p>
+                </div>
+                <div class="contribution">
+                    <h3>Proiect Chats</h3>
+                    <p>Nulla facilisi. In hac habitasse platea dictumst. Cras auctor turpis nec diam tincidunt, nec ultricies dolor cursus.</p>
+                </div>
+                <div class="contribution">
+                    <h3>Alte Proiecte Oficiale</h3>
+                    <p>Ut eu fermentum mauris. Vivamus sit amet risus id metus ullamcorper tincidunt. Duis finibus, lorem vel porttitor vehicula, ligula sapien luctus sapien.</p>
+                </div>
             </div>
-            <div class="portfolio-item">
-                <img src="https://via.placeholder.com/300" alt="Lucrare cosmetica">
-                <h3>Lucrare 2</h3>
-                <p>O descriere scurtă a lucrării sau a produsului</p>
-            </div>
-            <div class="portfolio-item">
-                <img src="https://via.placeholder.com/300" alt="Lucrare cosmetica">
-                <h3>Lucrare 3</h3>
-                <p>O descriere scurtă a lucrării sau a produsului</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>Pentru orice întrebări sau programări, nu ezita să mă contactezi.</p>
-            <div>
-                <i class="fas fa-envelope"></i> email@example.com
-            </div>
-            <div>
-                <i class="fas fa-phone"></i> 0123 456 789
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Portofoliu. Toate drepturile rezervate.</p>
-        </div>
-    </footer>
+        </section>
+    </div>
 </body>
 </html>
